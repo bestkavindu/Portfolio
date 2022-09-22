@@ -1,0 +1,102 @@
+.contact-form{
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+.w-left{
+    display: flex;
+    flex: 1;
+   
+}
+.w-left  .awsome{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem;
+}
+.w-left .awsome span:nth-child(1){
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.w-left .awsome span:nth-child(2){
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.c-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+}
+.c-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.c-right .user_name{
+    width: 20rem;
+    height: 2rem;
+    padding: 5px;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+.c-right .email{
+    width: 20rem;
+    height: 2rem;
+    padding: 0px 5px 5px 5px;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+.c-right .message{
+    width: 20rem;
+    height: 5rem;
+    padding: 5px;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+.c-right .button{
+    width: 5rem;
+    font-size: 1rem;
+}
+.c-right span{
+    color: var(--orange);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+@media screen and (max-width:480px) {
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-top: -100px;
+        height: 90vh;
+    }
+    .c-right .user_name{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .c-right .email{
+        width: 100%;
+    }
+    .c-right .message{
+        width: 100%;
+    }
+}
+
+

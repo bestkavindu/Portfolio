@@ -1,0 +1,13 @@
+.flotingdiv {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 15%;
+  padding: 0px 28px 0px 0px;
+  height: 4.5rem;
+  align-items: center;
+  box-shadow: var(--boxShadow);
+}
+.flotingdiv > img {
+  transform: scale(0.4);
+}

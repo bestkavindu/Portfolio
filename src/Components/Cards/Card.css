@@ -1,0 +1,25 @@
+.card{
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background:rgba(255,255,255,0.26);
+    border: 7px solid var(--orange);
+    box-shadow: var(--boxShadow);
+    border-radius: 24px;
+
+}
+.card>:nth-child(1){
+    transform: scale(0.8);
+    margin-bottom: -1rem;
+}
+.card>:nth-child(2){
+    font-size: 25px;
+}
+.card>:nth-child(3){
+    font-size: 18px;
+    color: var(--gray);}
+
