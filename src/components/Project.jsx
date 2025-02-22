@@ -1,49 +1,26 @@
 import React from 'react'
 import DiabetesML  from '../assets/img1.png'
-import SpicyBites from '../assets/SpicyBites.png'
-import Youtube from '../assets/Youtube.png'
-import Webelite from '../assets/Webelite.png'
-import Supercar from '../assets/Supercar.png'
+import MarcketingAnalyse from '../assets/Marcketing_analyse.png'
+
 import Cards from './Cards'
 
 
 const Projects = () => {
 
     const projectJson = [
+
+      {
+        title: 'Marketing Analysis',
+        desc: 'Use SQL for data cleaning and Preprocessing, Use python library for natural language processing to custom review data and for data visualization use Power BI',
+        image: MarcketingAnalyse,
+        github: "https://github.com/bestkavindu/Marketing-Analyze-SQL-Python-Power-BI-"
+      },
         {
           title: 'Diabetes Prediction Using Machine Learning',
           desc: 'Using python libraries (Pandas, Numpy, sklearn, etc)predict dieabetc Using LinearRegression',
           image: DiabetesML,
           github: "https://github.com/bestkavindu/diabetes_predict"
-        },
-        {
-          title: 'Spicy Bites',
-          desc: 'The team at Webelite Builders exceeded our expectations with their digital marketing expertise. Highly recommend!',
-          image: SpicyBites,
-          live: "https://spicybites.netlify.app/",
-          github: "https://github.com/rohitsingh93300/YtSpicyBites"
-        },
-        {
-          title: 'YouTube Clone',
-          desc: 'Working with Webelite Builders was a seamless experience. They brought our vision to life with a modern, responsive website.',
-          image: Youtube,
-          live: "https://youtube-clone-93300.netlify.app/",
-          github: "https://github.com/rohitsingh93300/YouTube-clone"
-        },
-        {
-          title: 'Webelite builder',
-          desc: 'Working with Webelite Builders was a seamless experience. They brought our vision to life with a modern, responsive website.',
-          image: Webelite,
-          live: "https://www.webelitebuilders.com/",
-          github: "#"
-        },
-        {
-          title: 'Super Car',
-          desc: 'Working with Webelite Builders was a seamless experience. They brought our vision to life with a modern, responsive website.',
-          image: Supercar,
-          live: "https://supercar123.netlify.app/",
-          github: "https://github.com/rohitsingh93300/supercars"
-        },
+        }
       ];
 
   return (
