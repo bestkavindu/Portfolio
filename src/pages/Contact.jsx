@@ -24,16 +24,16 @@ const Contact = () => {
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             {/* Replace with actual social media links/icons */}
-            <a href="https://www.facebook.com/bestkavindu" className="text-5xl">
+            <a href="https://www.facebook.com/bestkavindu" target='_blank' className="text-5xl">
             <FaFacebook className=' text-black hover:text-red-700'/>
             </a>
-            <a href="https://www.linkedin.com/in/sachin-kavindu-b8814a18a/" className="text-5xl">
+            <a href="https://www.linkedin.com/in/sachin-kavindu-b8814a18a/" target='_blank' className="text-5xl">
               <FaLinkedin className='text-black hover:text-red-700' />
             </a>
-            <a href="https://github.com/bestkavindu" className="text-5xl">
+            <a href="https://github.com/bestkavindu" target='_blank' className="text-5xl">
             <FaGithub className='text-black hover:text-red-700 '/>
             </a>
-            <a href="#" className="text-5xl">
+            <a href="mailto:bestkavindu@gmail.com" className="text-5xl">
             <MdEmail className='text-black hover:text-red-700'/>
             </a>
           </div>
