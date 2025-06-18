@@ -1,6 +1,7 @@
 import React from 'react'
 import DiabetesML  from '../assets/img1.png'
 import MarcketingAnalyse from '../assets/Marcketing_analyse.png'
+import DataWarehouse from '../assets/data-warehouse.png'
 
 import Cards from './Cards'
 
@@ -9,6 +10,12 @@ const Projects = () => {
 
     const projectJson = [
 
+       {
+          title: 'Data Warehouse and Analytics Project',
+          desc: 'This Project contains datawarehousing and analytics solution, from building datawarehouse to generating actionable insights.',
+          image: DataWarehouse,
+          github: "https://github.com/bestkavindu/sql-data-warehouse"
+        },
       {
         title: 'Marketing Analysis',
         desc: 'Use SQL for data cleaning and Preprocessing, Use python library for natural language processing to custom review data and for data visualization use Power BI',
