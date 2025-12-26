@@ -1,49 +1,40 @@
 import React from 'react'
 import Navbar from '../components/NavBar'
 import Footer from '../components/Footer'
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
-
 
 const Contact = () => {
   return (
-    <>
-
-    <div className="min-h-screen flex flex-col">
-    <Navbar/>
-      {/* Main Content */}
-      <div className="flex-grow flex items-center justify-center bg-gray-100 text-white">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-black">Get in Touch</h2>
-          <p className="mt-2 text-black">
-            I'm always open to new opportunities and collaboration. Feel free to
-            reach out!
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow flex items-center justify-center bg-background py-20">
+        <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+          <h2 className="text-accent font-medium tracking-wide uppercase text-sm mb-2">Contact</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Get in Touch</h2>
+          <p className="text-xl text-text-muted mb-12 leading-relaxed">
+            I'm always open to new opportunities and collaboration. 
+            Feel free to reach out to me via email or social media!
           </p>
-          <div className="flex justify-center space-x-4 mt-4">
-            {/* Replace with actual social media links/icons */}
-            <a href="https://www.facebook.com/bestkavindu" target='_blank' className="text-5xl">
-            <FaFacebook className=' text-black hover:text-red-700'/>
+          
+          <div className="flex flex-wrap justify-center gap-8">
+            <a href="https://www.facebook.com/bestkavindu" target='_blank' rel="noopener noreferrer" className="p-4 bg-white rounded-full shadow-sm border border-gray-100 text-3xl text-primary hover:text-accent hover:shadow-md transition-all hover:-translate-y-1">
+              <FaFacebook />
             </a>
-            <a href="https://www.linkedin.com/in/sachin-kavindu-b8814a18a/" target='_blank' className="text-5xl">
-              <FaLinkedin className='text-black hover:text-red-700' />
+            <a href="https://www.linkedin.com/in/sachin-kavindu-b8814a18a/" target='_blank' rel="noopener noreferrer" className="p-4 bg-white rounded-full shadow-sm border border-gray-100 text-3xl text-primary hover:text-accent hover:shadow-md transition-all hover:-translate-y-1">
+              <FaLinkedin />
             </a>
-            <a href="https://github.com/bestkavindu" target='_blank' className="text-5xl">
-            <FaGithub className='text-black hover:text-red-700 '/>
+            <a href="https://github.com/bestkavindu" target='_blank' rel="noopener noreferrer" className="p-4 bg-white rounded-full shadow-sm border border-gray-100 text-3xl text-primary hover:text-accent hover:shadow-md transition-all hover:-translate-y-1">
+              <FaGithub />
             </a>
-            <a href="mailto:bestkavindu@gmail.com" className="text-5xl">
-            <MdEmail className='text-black hover:text-red-700'/>
+            <a href="mailto:bestkavindu@gmail.com" className="p-4 bg-white rounded-full shadow-sm border border-gray-100 text-3xl text-primary hover:text-accent hover:shadow-md transition-all hover:-translate-y-1">
+              <MdEmail />
             </a>
           </div>
         </div>
-      </div>
-    
-    <Footer/>
-  </div>
-
-    </>
+      </main>
+      <Footer />
+    </div>
   )
 }
 

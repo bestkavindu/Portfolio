@@ -31,12 +31,16 @@ const Projects = () => {
       ];
 
   return (
-    <section id='projects' className='relative bg-gray-100 py-10 px-4'>
-      <div className='mb-16 max-w-7xl mx-auto'>
-        <h2 className='text-3xl font-bold mb-8 text-gray-700 border-b border-red-500 w-max pb-4'>My Projects</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10'>
-            {projectJson.map((items)=> {
-                return <Cards item={items}/>
+    <section id='projects' className='relative py-20 px-4'>
+      <div className='container mx-auto px-4 md:px-6'>
+        <div className='text-center mb-16'>
+            <h2 className='text-accent font-medium tracking-wide uppercase text-sm mb-2'>Portfolio</h2>
+            <h3 className='text-3xl md:text-4xl font-bold text-primary'>Featured Projects</h3>
+        </div>
+        
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {projectJson.map((items, index)=> {
+                return <Cards key={index} item={items}/>
             })}
         </div>
       </div>

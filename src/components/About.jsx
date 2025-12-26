@@ -11,87 +11,57 @@ import Python from '../assets/Python-Logo.png'
 import PowerBI from '../assets/PowerBI.png'
 import SQL from '../assets/sql.png'
 
+const SkillBadge = ({ img, name }) => (
+    <div className='flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1 w-24 h-24 gap-2'>
+        <img src={img} alt={name} className='w-8 h-8 object-contain' />
+        <span className='text-xs font-semibold text-gray-700 text-center'>{name}</span>
+    </div>
+)
+
 const AboutComponent = () => {
     return (
-        <div className='relative' id='about'>
-            <div className='bg-gray-100 py-12'>
-                <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='text-center'>
-                        <h2 className='text-base text-red-600 font-semibold tracking-wide uppercase'>About Me</h2>
-                        <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>Hi, I'm Sachin Kavindu</p>
-                        <p className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto'>
-                            Experienced Data Analytics with a strong background in Software Engineering.
-                        </p>
-                    </div>
-                    <div className='mt-10'>
-                        <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
-                            <div>
-                                <h3 className='text-2xl font-semibold text-gray-900'>My Journey</h3>
-                                <p className='mt-4 text-lg text-gray-600'>
-                                    I started my career as an Associate Software Engineer, where I built intuitive and scalable web applications using Laravel and React. After a year, I transitioned to Clindata Pvt as a Junior Associate Statistical Programmer, focusing on data validation, cleaning, preprocessing, and generating reports through statistical analysis. Combining my expertise in web development and statistical programming, I deliver data-driven solutions with precision and efficiency.
-                                </p>
-                            </div>
-                            <div className='border border-red-200 rounded-lg md:p-7 py-7  flex flex-col gap-8 items-center shadow-lg shadow-red-300'>
-                                <h3 className='text-2xl font-semibold text-red-600'>Skills & Expertise</h3>
-                                <div className='flex items-center justify-center flex-wrap gap-3'>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Python} alt="" className='w-10' />
-                                        <span className='font-semibold'>Python</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={PowerBI} alt="" className='w-10' />
-                                        <span className='font-semibold'>Power BI</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={SQL} alt="" className='w-10' />
-                                        <span className='font-semibold'>SQL</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Html} alt="" className='w-10' />
-                                        <span className='font-semibold'>HTML</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Css} alt="" className='w-8' />
-                                        <span className='font-semibold'>CSS</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Javascript} alt="" className='w-10' />
-                                        <span className='font-semibold'>Javascript</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={ReactLogo} alt="" className='w-8 rounded-full' />
-                                        <span className='font-semibold'>React</span>
-                                    </div>
+        <section className='relative py-24 bg-gray-50' id='about'>
+            <div className='container mx-auto px-4 md:px-6'>
+                <div className='text-center mb-16'>
+                    <h2 className='text-accent font-medium tracking-wide uppercase text-sm mb-2'>About Me</h2>
+                    <h3 className='text-3xl md:text-4xl font-bold text-primary'>My Journey & Expertise</h3>
+                </div>
 
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Tailwind} alt="" className='w-8 rounded-full' />
-                                        <span className='font-semibold'>Tailwind Css</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Bootstrap} alt="" className='w-10' />
-                                        <span className='font-semibold'>Bootstrap</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center gap-1 w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={NodeLogo} alt="" className='w-10' />
-                                        <span className='font-semibold'>Node Js</span>
-                                    </div>
-                                    <div className='border border-red-300 flex items-center  w-max px-2 py-1 rounded-lg shadow-md shadow-red-300'>
-                                        <img src={Mongodb} alt="" className='w-10' />
-                                        <span className='font-semibold'>Mongodb</span>
-                                    </div>
-
-                                </div>
-                            </div>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
+                    <div className='space-y-8'>
+                        <div className='bg-white p-8 rounded-2xl shadow-sm border border-gray-100'>
+                            <h4 className='text-2xl font-bold mb-4 text-primary'>Who I Am</h4>
+                            <p className='text-text-muted leading-relaxed mb-6'>
+                                I started my career as an Associate Software Engineer, where I built intuitive and scalable web applications using Laravel and React. 
+                                After a year, I transitioned to Clindata Pvt as a Junior Associate Statistical Programmer, focusing on data validation, cleaning, 
+                                and preprocessing.
+                            </p>
+                            <p className='text-text-muted leading-relaxed'>
+                                Combining my expertise in web development and statistical programming, I deliver data-driven solutions with precision and efficiency.
+                                I'm passionate about exploring new technologies and turning ideas into reality.
+                            </p>
                         </div>
                     </div>
-                    <div className='mt-12'>
-                        <h3 className='text-2xl font-semibold text-gray-900'>More About Me</h3>
-                        <p className='mt-4 text-lg text-gray-600'>
-                        I'm a passionate coder who loves exploring new technologies and turning ideas into reality. Always eager to learn, I pick up new skills quickly and enjoy creating innovative solutions through coding. Whether it's building web applications or diving into data analysis, I’m driven by the challenge of crafting something new and impactful.                        </p>
+
+                    <div className='w-full'>
+                        <h4 className='text-2xl font-bold mb-6 text-primary'>Technical Skills</h4>
+                        <div className='flex flex-wrap gap-4'>
+                            <SkillBadge img={Python} name="Python" />
+                            <SkillBadge img={PowerBI} name="Power BI" />
+                            <SkillBadge img={SQL} name="SQL" />
+                            <SkillBadge img={ReactLogo} name="React" />
+                            <SkillBadge img={NodeLogo} name="Node.js" />
+                            <SkillBadge img={Mongodb} name="MongoDB" />
+                            <SkillBadge img={Tailwind} name="Tailwind" />
+                            <SkillBadge img={Javascript} name="JS" />
+                            <SkillBadge img={Html} name="HTML" />
+                            <SkillBadge img={Css} name="CSS" />
+                            <SkillBadge img={Bootstrap} name="Bootstrap" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

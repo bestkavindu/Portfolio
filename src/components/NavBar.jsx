@@ -1,42 +1,68 @@
 import React, { useState } from 'react'
-
 import { Menu, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
-  const [mobileMenuOpen, setmMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation()
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Review', path: '/review' },
+    { name: 'Contact', path: '/contact' },
+  ]
+
+  const isActive = (path) => location.pathname === path
+
   return (
-    <header className='sticky top-0 z-50  w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 lg:px-0'>
-      <div className=' max-w-7xl mx-auto flex h-14 items-center'>
-        <div className='md:mr-4 flex justify-between w-full'>
-          <a href="#" className='mr-6 flex items-center space-x-2'>
-            <h1 className='text-2xl font-bold'><span className='text-red-500 font-extrabold text-3xl'>S</span>achin <span className='text-red-500 text-3xl font-extrabold'>R</span>ajapaksha</h1>
-          </a>
-          <nav className='md:flex hidden items-center space-x-6 text-lg font-medium'>
-            <Link to={'/'} className='transition-colors hover:text-foreground/80 text-foreground/60'>Home</Link>
-            <Link to={'/about'} className='transition-colors hover:text-foreground/80 text-foreground/60'>About</Link>
-            <Link to={'/projects'} className='transition-colors hover:text-foreground/80 text-foreground/60'>Projects</Link>
-            <Link to={'/review'} className='transition-colors hover:text-foreground/80 text-foreground/60'>Review</Link>
-            <Link to={'/contact'} className='transition-colors hover:text-foreground/80 text-foreground/60'>Contact</Link>
-          </nav>
-        </div>
-        <button className='inline-flex items-center justify-center rounded-md md:hidden' onClick={() => setmMobileMenuOpen(!mobileMenuOpen)}>
-          <span className='sr-only'>Open main menu</span>
-          {mobileMenuOpen ? (
-            <X className='h-6 w-6' aria-hidden="true" />
-          ) : (
-            <Menu className='h-6 w-6' aria-hidden="true" />
-          )}
+    <header className='sticky top-0 z-50 w-full glass'>
+      <div className='container mx-auto px-4 md:px-6 h-16 flex items-center justify-between'>
+        <Link to="/" className='flex items-center gap-1 group'>
+          <span className='text-2xl font-bold tracking-tighter'>Sachin<span className='text-accent'>.</span></span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className='hidden md:flex items-center space-x-8'>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              to={link.path} 
+              className={`text-sm font-medium transition-colors hover:text-accent ${isActive(link.path) ? 'text-accent' : 'text-text-muted'}`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Link to="/contact" className='px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition-colors'>
+            Hire Me
+          </Link>
+        </nav>
+
+        {/* Mobile Toggle */}
+        <button 
+          className='md:hidden p-2 text-text-main' 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
+
+      {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className='md:hidden'>
-          <div className='space-y-1 px-2 pb-3 pt-2'>
-            <Link to={'/'} className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Home</Link>
-            <Link to={'/about'} className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>About</Link>
-            <Link to={'/projects'} className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Projects</Link>
-            <Link to={'/review'} className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Review</Link>
-            <Link to={'/contact'} className='block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900'>Contact</Link>
+        <div className='md:hidden absolute top-16 left-0 w-full bg-surface border-b border-border shadow-lg animate-fade-in'>
+          <div className='flex flex-col p-4 space-y-4'>
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                to={link.path} 
+                className={`text-lg font-medium ${isActive(link.path) ? 'text-accent' : 'text-text-main'}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       )}
