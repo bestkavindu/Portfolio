@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
     desc: "A data warehouse following the Medallion Architecture with robust ETL pipelines to extract, clean, standardize and load CSV data into SQL Server. Implemented data quality checks, deduplication and consistent naming conventions across layers, and modeled a star schema of fact and dimension tables in the Gold layer for analytics-ready reporting.",
     tags: ["SQL Server", "T-SQL", "ETL", "Star Schema"],
     href: LINKS.github,
-    image: null,
+    image: "/projects/sql-data-warehouse.jpg",
   },
   {
     slug: "proj-bms",
@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
     desc: "Large-scale budget management platform serving the entire Lyceum school network. Integrates financial data sourced from SAP and provides centralized budget planning, allocation tracking and consolidated reporting across all schools — engineered for scale and reliability.",
     tags: ["Laravel", "Livewire", "PostgreSQL", "SAP", "REST APIs"],
     href: null,
-    image: null,
+    image: "/projects/budget-management-system.jpg",
   },
 ];
 
