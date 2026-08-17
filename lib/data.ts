@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     desc: "End-to-end medallion data pipeline replacing a manual monthly HR reporting workflow. Automated ingestion of Excel sources into the Bronze layer of a Fabric Lakehouse, PySpark cleaning and standardization into Silver, and stored procedures building fact tables in Gold. The curated data drives a published Power BI dashboard covering headcount, attrition, payroll and recruitment KPIs — with every refresh built on governed, preprocessed data.",
     tags: ["Microsoft Fabric", "PySpark", "Power BI", "DAX", "Medallion"],
     href: null,
-    image: null,
+    image: "/projects/hrms-medallion-pipeline.png",
   },
   {
     slug: "proj-dwh",
